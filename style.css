@@ -1,0 +1,316 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* text-decoration: none; */
+    /* list-style: none; */
+    /* box-sizing: border-box; */
+  }
+  body{
+    font-family: montserrat;
+  }
+  nav{
+    background: #008000;
+    height: 80px;
+    width: 100%;
+  }
+  #rjd_logo{
+    height: 70px;
+    /* align it to left of windows  with little margin*/
+    /* float: left;  */
+    margin-top: -10px;
+    margin: 0px 0 0 10px;
+}
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #056d05;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+#contribute{
+    background-color: #98af06;
+    color: white;
+    height: 40px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+#section-1{
+  background-color: pink;
+  width: 100%;
+  position: relative;
+  height: 560px;
+  margin-top: 2px;
+  display: flex;
+}
+
+.left {
+  background-color: #f0f0f0;
+  width: 30%;
+  min-width: 200px; /* Set a minimum width to prevent shrinking too much */
+  box-sizing: border-box;
+  padding: 0px 20px;
+  background-image: url(/images/bihar_background.png);
+  background-size: 100% 100%;
+  /* border-right: 12px solid #008000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.right {
+  background-color: #e0e0e0;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-color: #545969;
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-bubbles {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.card-bubble {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.card-bubble.active {
+  background-color: #333;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+
+
+
+.sec_1_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 10px; */
+  /* border: 2px solid #008000; */
+}
+#section-2,#section-4{
+  position: relative;
+  width: 100%;
+  background-color: #008000;
+  padding: 65px;
+}
+.about_us{
+  top: 50%;
+  color: white;
+  font-size: 65px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  text-decoration: underline;
+  border-radius: 7px 7px 7px 7px;
+}
+.about_us_content{
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding: 0px 200px;
+}
+#section-3{
+  position: relative;
+  margin-top: auto;
+  width: 100%;
+  height: 100px;
+  background-color: #b7b7b8;
+  background-color: #008000;
+}
+#yellow_line{
+  position: absolute;
+  width: 70%;
+  height: 5px;
+  background-color: #e4c70a;
+  border-radius: 7px 7px 7px 7px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#join_rjd{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #006d00;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+  @media (max-width: 952px){
+    #rjd_logo{
+      height: 70px;
+      float: left; 
+      margin-top: -10px;
+      margin: 0px 0 0 10px;
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+}
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    #rjd_logo{
+        height: 40px;
+        margin-top: 15px;
+                
+    }    
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #056d05;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    #section-1 {
+      flex-direction: column;
+    }
+
+    .left, .right {
+      width: 100%;
+    }    
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .slider-container {
+    position: relative;
+    /* width: 500px;
+    height: 300px; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slider-bubbles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .slider-bubble {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .slider-bubble.active {
+    background-color: #333;
+  }
