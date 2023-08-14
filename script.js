@@ -66,3 +66,61 @@ const videoIframe = document.getElementById('video-iframe');
 videoIframe.addEventListener('ended', function() {
     videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
 });
+
+
+
+
+
+
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const bubbles = document.querySelectorAll('.bubble');
+
+let currentIndex = 0;
+let interval;
+
+function updateCarousel() {
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  bubbles.forEach((bubble, index) => {
+    bubble.classList.toggle('active', index === currentIndex);
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % 4;
+  updateCarousel();
+}
+
+function startInterval() {
+  interval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+function stopInterval() {
+  clearInterval(interval);
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + 4) % 4;
+  updateCarousel();
+  stopInterval();
+  startInterval();
+});
+
+nextBtn.addEventListener('click', () => {
+  nextSlide();
+  stopInterval();
+  startInterval();
+});
+
+bubbles.forEach((bubble, index) => {
+  bubble.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+    stopInterval();
+    startInterval();
+  });
+});
+
+// Start the interval when the page loads
+startInterval();

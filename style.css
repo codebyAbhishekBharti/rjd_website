@@ -257,7 +257,149 @@
 .image-item p {
   margin-top: 10px;
 }
+#section_6{
+  position: relative;
+  background-color: #b7b7b8;
+  width: 100%;
+  height: 110vh;
+}
+.galary_heading{
+  position: absolute;
+  background-color: #8d8d92;
+  left: 50%;
+  top: 40px;
+  transform: translate(-50%);
+  font-size: 30px;;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding: 10px 40px;
+  border-radius: 30px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
 
+.carousel-container {
+  position: absolute;
+  width: 80%;
+  height: 80vh;
+  top: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 5px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.indicators_slider {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.bubble.active {
+  background-color: #555;
+}
+
+.arrow {
+  font-size: 45px;
+  position: absolute;
+  top: 50%;
+  color: white;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+#section_7{
+  position: relative;
+  background-color: #b7b7b8;
+
+}
+#new_media_heading{
+  font-size: 30px;
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#grid1{
+  display: grid;
+  width: 90%;
+  margin: auto;
+  grid-template-columns: auto auto auto;
+  gap: 70px;
+  padding-bottom: 50px;
+  
+}
+.grid_image{
+  width: 100%;
+  height: 100%;
+}
+.grid1cont{
+  display: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: white;
+  border: 6px solid #008000;
+  border-radius: 3px;
+  background: linear-gradient(to top, #000000 5%, transparent 60%);
+}
+.grid_text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to top, #000000 5%, transparent 60%);
+}
+#section_8{
+  margin-top: 10px;
+  width: 100%;
+  height: 400px;
+  background-image: url(images/bottom_banner.png);
+}
+.green_screen{
+  width: 100%;
+  height: 100%;
+  background-color: #008000;
+  opacity: 0.5;
+}
 @media (max-width: 952px){
     #rjd_logo{
       height: 70px;
@@ -269,104 +411,133 @@
     }
   }
 }
-  @media (max-width: 858px){
-    .checkbtn{
-      display: block;
-    }
-    #rjd_logo{
-        height: 40px;
-        margin-top: 15px;
-                
-    }    
-    ul{
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #056d05;
-      top: 80px;
-      left: -100%;
-      z-index: 5;
-      text-align: center;
-      transition: all .5s;
-    }
-    nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    nav ul li a{
-      font-size: 20px;
-    }
-    a:hover,a.active{
-      background: none;
-      color: #0082e6;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
-    #section-1 {
-      flex-direction: column-reverse;
-    }
-    .right{
-      width: 100%;
-      height: 300px;
-      background-position: center;
-      background-size: cover;
-      object-fit: cover;
-    }
-    .left{
-      margin-top: 700px;
-      width: 100%;
-      height: 400px; !important
-      top: 100%;
-      transform: translateY(-100%);      
-    }
-    #card_div_1{
-      padding: 80px 20px;  
-      font-size: 20px;
-      line-height: 25px;
-    }
-    #card_div_2{
-      padding: 20px 20px;  
-      font-size: 15px;
-      line-height: 20px;
-    }
-    #card_read_more{
-      margin-top: 300px;
-      padding: 5px 20px;  
-      font-size: 15px;
-      line-height: 20px;
-    }
-    #section_2{
-      margin-top: 700px;
-    }
-    #agenda_content{
-      padding: 20px 10%;
-      font-size: 12px;
-    }
-    #section_3{
-      height: 100px;
-    }
-    #join_box{
-      font-size: 15px;
-      padding: 5px 30px;
-    }
-    #section_4{
-      width: 100%;
-      height: auto;
-    }
-    #social_media_heading{
-      font-size: 20px;
-      padding: 10% 20%;
-    }
-    .image-container{
-      padding: 0px 0px;
-      margin: -20px;
-    }
-    .dashed-line{
-      display: none;
-    }
-    .image-item img{
-      width: 50px;
-    }
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
   }
+  #rjd_logo{
+      height: 40px;
+      margin-top: 15px;
+              
+  }    
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #056d05;
+    top: 80px;
+    left: -100%;
+    z-index: 5;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  #section-1 {
+    flex-direction: column-reverse;
+  }
+  .right{
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+  }
+  .left{
+    margin-top: 700px;
+    width: 100%;
+    height: 400px !important;
+    top: 100%;
+    transform: translateY(-100%);      
+  }
+  #card_div_1{
+    padding: 80px 20px;  
+    font-size: 20px;
+    line-height: 25px;
+  }
+  #card_div_2{
+    padding: 20px 20px;  
+    font-size: 15px;
+    line-height: 20px;
+  }
+  #card_read_more{
+    margin-top: 300px;
+    padding: 5px 20px;  
+    font-size: 15px;
+    line-height: 20px;
+  }
+  #section_2{
+    margin-top: 700px;
+  }
+  #agenda_content{
+    padding: 20px 10%;
+    font-size: 12px;
+  }
+  #section_3{
+    height: 100px;
+  }
+  #join_box{
+    font-size: 15px;
+    padding: 5px 30px;
+  }
+  #section_4{
+    width: 100%;
+    height: 250px;
+  }
+  #social_media_heading{
+    font-size: 20px;
+    padding: 10% 20%;
+  }
+  .image-container{
+    padding: 0px 0px;
+    margin: -20px;
+    padding-bottom: 30px;
+  }
+  .dashed-line{
+    display: none;
+  }
+  .image-item img{
+    width: 50px;
+  }
+  .galary_heading{
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-top: -5px;
+  }
+  #section_6{
+    width: 100%;
+    height: 360px;
+  }
+  .carousel-container{
+    width: 100%;
+    height: 250px;
+    top: 100px;
+  }
+  .slide img{
+    width: 100%;
+    height: 100%;
+  }
+  .carousel{
+    height: 200px;
+  }
+  #grid1{
+    width: 90%;
+    grid-template-columns: 100%;
+}
+#grid1cont4,#grid1cont5,#grid1cont6{
+  display: none;
+}
+}
