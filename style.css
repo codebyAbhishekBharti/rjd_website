@@ -72,7 +72,7 @@
   width: 30%;
   height: 90vh;
   background-color: rosybrown;
-  background-image: url(/images/bihar_background.png);
+  background-image: url(images/bihar_background.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   left: 0;
@@ -82,9 +82,9 @@
   width: 70%;
   height: 90vh;
   background-color: #008000;
-  /* background-image: url(/images/Tejashwi-Yadav-salil-bera11.jpg); */
+  /* background-image: url(images/Tejashwi-Yadav-salil-bera11.jpg); */
   background-image: linear-gradient(to right, #ababac 5%, transparent 25%),
-  url('/images/Tejashwi-Yadav-salil-bera11.jpg');
+  url('images/Tejashwi-Yadav-salil-bera11.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   right: 0;
