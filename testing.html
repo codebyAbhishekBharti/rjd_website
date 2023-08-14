@@ -1,138 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Image Carousel</title>
-  <style>
-    body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  #section_8 {
+    margin-top: 10px;
+    width: 100%;
+    height: 400px;
+    background-image: url(images/bottom_banner.png);
+  }
 
-.carousel-container {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
-}
+  .green_screen {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,128,0,0.5);
+    padding: 25px 5%;
+  }
 
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  flex: 0 0 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-}
-
-.indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bubble {
-  width: 12px;
-  height: 12px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.bubble.active {
-  background-color: #555;
-}
-
-.arrow {
-  font-size: 24px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-  </style>
+  .bottom_boxing {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: #003482;
+    color: white;
+  }
+</style>
+<title>Opacity Demo</title>
 </head>
 <body>
-  <div class="carousel-container">
-    <div class="carousel">
-      <div class="slide">
-        <img src="/images/tejashwi-yadav-1604849739.jpg" alt="Image 1">
-      </div>
-      <div class="slide">
-        <img src="image2.jpg" alt="Image 2">
-      </div>
-      <div class="slide">
-        <img src="image3.jpg" alt="Image 3">
-      </div>
-      <div class="slide">
-        <img src="image4.jpg" alt="Image 4">
+  <div id="section_8">
+    <div class="green_screen">
+      <div class="bottom_boxing">
+        asd
       </div>
     </div>
-    <div class="indicators">
-      <div class="bubble active"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-    </div>
-    <button class="arrow prev">&larr;</button>
-    <button class="arrow next">&rarr;</button>
   </div>
-  <!-- <script src="script.js"></script> -->
-  <script>
-    const carousel = document.querySelector('.carousel');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-const bubbles = document.querySelectorAll('.bubble');
-
-let currentIndex = 0;
-
-function updateCarousel() {
-  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-  bubbles.forEach((bubble, index) => {
-    bubble.classList.toggle('active', index === currentIndex);
-  });
-}
-
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + 4) % 4;
-  updateCarousel();
-});
-
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % 4;
-  updateCarousel();
-});
-
-bubbles.forEach((bubble, index) => {
-  bubble.addEventListener('click', () => {
-    currentIndex = index;
-    updateCarousel();
-  });
-});
-
-  </script>
 </body>
 </html>
