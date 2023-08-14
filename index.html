@@ -10,7 +10,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <!-- include font awesome for icons -->
         <script src="https://kit.fontawesome.com/e65ce9ab21.js" crossorigin="anonymous"></script>
-    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:wght@700&display=swap" rel="stylesheet">        
     </head>
   <body>
     <nav>
@@ -29,132 +32,42 @@
         <li><a href="#">language</a></li>
       </ul>
     </nav>
-    <section id="section-1" >
+    <section id="section_1">
       <div class="left">
-        <div class="card-container">
-          <div class="card-content">
-            <h3>This is How  a Young Vision can change the BIHAR's fate.</h3>
-            This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.
-          </div>
-          <div class="card-bubbles">
-            <div class="card-bubble active"></div>
-            <div class="card-bubble"></div>
-            <div class="card-bubble"></div>
-          </div>
+        <div class="card">
+          <div id="card_div_1">This is How  a Young Vision can change the BIHAR's fate.</div>
+          <div id="card_div_2">This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.</div>
+          <div id="card_read_more" style="opacity: 1;">Read More</div>
         </div>
+        <div class="indicators">
+          <span id="btn1" onclick="func1()"  class="active"><i class="fa-solid fa-circle"></i></span>
+          <span id="btn2" onclick="func2()" ><i class="fa-solid fa-circle"></i></span>
+          <span id="btn3" onclick="func3()" ><i class="fa-solid fa-circle"></i></span>
+          <span id="btn4" onclick="func4()" ><i class="fa-solid fa-circle"></i></span>
       </div>
-      <div class="right">    
-        <!-- <img class="sec_1_img" src="/images/Tejashwi-Yadav-salil-bera11.jpg" alt=""> -->
-
-        <div class="slider-container">
-          <div class="slider">
-            <div class="slide">
-              <img src="/images/Tejashwi-Yadav-salil-bera11.jpg" alt="Image 1">
-            </div>
-            <div class="slide">
-              <img src="/images/lalu.jpg" alt="Image 2">
-            </div>
-            <div class="slide">
-              <img src="/images/tejashwi-yadav-1604849739.jpg" alt="Image 3">
-            </div>
-          </div>
-          <div class="slider-bubbles">
-            <div class="slider-bubble active"></div>
-            <div class="slider-bubble"></div>
-            <div class="slider-bubble"></div>
-          </div>
-        </div>        
+      </div>
+      <div id="right_banner" class="right">
+        <div class="indicators">
+          <span id="btn1" onclick="func1()"  class="active"><i class="fa-solid fa-circle"></i></span>
+          <span id="btn2" onclick="func2()" ><i class="fa-solid fa-circle"></i></span>
+          <span id="btn3" onclick="func3()" ><i class="fa-solid fa-circle"></i></span>
+          <span id="btn4" onclick="func4()" ><i class="fa-solid fa-circle"></i></span>
+      </div>        
       </div>
     </section>
-    <section id="section-3">
-      <div id="yellow_line"></div>
-      <div id="join_rjd">Join <foont style="color: #ccb601;"> RJD!</foont></div>
-    </section>    
-    <section id="section-2">
-      <div class="about_us"> About Us</div>
-      <div class="about_us_content">
-        Rashtriya Janata Dal locates itself in the collective aspirations of people and communities striving to carve out a society based on the premises of social justice and secularism. Since its inception Rashtriya Janata Dal is relentlessly working as the voice of the socially and economically downtrodden sections of the society. The RJD believes in working on and propagating socialist politics and towrds this end the party has been developing solidarity network of landless labourers, peasants and farmers other weaker groups as well as progressive people from other sections of society. 
+    <section id="section_2">
+      <div id="party_agenda">
+        Party Agenda
       </div>
-      <hr style="height: 5px;background-color: white; width: 50%; border-radius: 7px 7px 7px 7px; margin: auto auto;margin-top: 20px;">
-    </section>
-    <section id="section-4" >
-      <div class="about_us"> Party Agenda</div>
-      <div class="about_us_content">
+      <div id="agenda_content">
         The Rashtriya Janata Dal (RJD) is rooted in the aspirations of people seeking a just and secular society. It tirelessly advocates for the marginalized, embracing socialist ideals. RJD fosters unity among laborers, farmers, and weaker sections, drawing from Gandhian and socialist legacies. Rejecting communalism, the party upholds peaceful dissent as a fundamental right.
       </div>
-      <hr style="height: 5px;background-color: white; width: 50%; border-radius: 7px 7px 7px 7px; margin: auto auto;margin-top: 20px;">
     </section>
-
-      <!-- include main.js file -->
-    <script src="/main.js"></script>
-    <script>
-      const contentDiv = document.querySelector('.card-content');
-      const bubbles = document.querySelectorAll('.card-bubble');
-      const contents = [
-        '<h2>Card Content 1</h2><p>This is the content of card 1.</p>',
-        '<h2>Card Content 2</h2><p>This is the content of card 2.</p>',
-        '<h2>Card Content 3</h2><p>This is the content of card 3.</p>'
-      ];
-  
-      let currentIndex = 0;
-  
-      function showContent(index) {
-        contentDiv.innerHTML = contents[index];
-        bubbles.forEach((bubble, i) => {
-          bubble.classList.toggle('active', i === index);
-        });
-      }
-  
-      function nextContent() {
-        currentIndex = (currentIndex + 1) % contents.length;
-        showContent(currentIndex);
-      }
-  
-      bubbles.forEach((bubble, i) => {
-        bubble.addEventListener('click', () => {
-          currentIndex = i;
-          showContent(currentIndex);
-        });
-      });
-  
-      showContent(currentIndex);
-    </script>
-
-
-
-
-    <!-- code for image slider -->
-    <!-- <script>
-      const slides = document.querySelectorAll('.slide');
-      const bubbles = document.querySelectorAll('.slider-bubble');
-
-      let currentIndex = 0;
-
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.style.transform = `translateX(${(i - index) * 100}%)`;
-        });
-
-        bubbles.forEach((bubble, i) => {
-          bubble.classList.toggle('active', i === index);
-        });
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-      }
-
-      bubbles.forEach((bubble, i) => {
-        bubble.addEventListener('click', () => {
-          currentIndex = i;
-          showSlide(currentIndex);
-        });
-      });
-
-      showSlide(currentIndex);
-      setInterval(nextSlide, 5000); // Auto slide every 5 seconds
-    </script> -->
-
+    <section id="section_3">
+      <div ></div>
+      <hr id="yelowline" style="height: 5px;">
+      <div id="join_box">JOIN <font style="color: #dbbe02;">RJD!</font></div>
+    </section>
+    <script src="/script.js"></script>
   </body>
 </html>

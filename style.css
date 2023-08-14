@@ -61,150 +61,139 @@
     border-radius: 5px;
     font-weight: bold;
   }
-#section-1{
+
+#section_1{
+  position: relative;
   background-color: pink;
   width: 100%;
-  position: relative;
-  height: 560px;
-  margin-top: 2px;
-  display: flex;
 }
-
-.left {
-  background-color: #f0f0f0;
+.left{
+  position: absolute;
   width: 30%;
-  min-width: 200px; /* Set a minimum width to prevent shrinking too much */
-  box-sizing: border-box;
-  padding: 0px 20px;
+  height: 90vh;
+  background-color: rosybrown;
   background-image: url(/images/bihar_background.png);
+  background-repeat: no-repeat;
   background-size: 100% 100%;
-  /* border-right: 12px solid #008000; */
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-}
-.right {
-  background-color: #e0e0e0;
-  width: 70%;
-  box-sizing: border-box;
-}
-
-
-.card-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-  background-color: #545969;
-  /* border-radius: 10px; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.card-content {
-  position: absolute;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: opacity 0.5s ease-in-out;
 }
-
-.card-bubbles {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.card-bubble {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.card-bubble.active {
-  background-color: #333;
-}
-
-.card-content p {
-  margin: 0;
-}
-
-
-
-
-.sec_1_img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* border-radius: 10px; */
-  /* border: 2px solid #008000; */
-}
-#section-2,#section-4{
-  position: relative;
-  width: 100%;
-  background-color: #008000;
-  padding: 65px;
-}
-.about_us{
-  top: 50%;
-  color: white;
-  font-size: 65px;
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bolder;
-  text-decoration: underline;
-  border-radius: 7px 7px 7px 7px;
-}
-.about_us_content{
-  color: white;
-  font-size: 25px;
-  text-align: center;
-  padding: 0px 200px;
-}
-#section-3{
-  position: relative;
-  margin-top: auto;
-  width: 100%;
-  height: 100px;
-  background-color: #b7b7b8;
-  background-color: #008000;
-}
-#yellow_line{
+.right{
   position: absolute;
   width: 70%;
-  height: 5px;
-  background-color: #e4c70a;
-  border-radius: 7px 7px 7px 7px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  height: 90vh;
+  background-color: #008000;
+  /* background-image: url(/images/Tejashwi-Yadav-salil-bera11.jpg); */
+  background-image: linear-gradient(to right, #ababac 5%, transparent 25%),
+  url('/images/Tejashwi-Yadav-salil-bera11.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  right: 0;
 }
-#join_rjd{
+.card{
+  background-color: #003482;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+#card_div_1{
   position: absolute;
-  top: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #003482;
+  opacity: 1;
+  color: white;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bolder;
+  padding: 100px 50px;  
+  font-size: 30px;
+  line-height: 35px;
+}
+#card_div_2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 130px;
+  opacity: 1;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 100px 50px;  
+  font-size: 20px;
+  line-height: 25px;
+}
+#card_read_more{
+  position: absolute;
+  margin-top: 400px;
+  opacity: 1;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  background-color: #008000;
+  opacity: 1;
+  bottom: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  background-color: #006d00;
-  font-size: 20px;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bolder;
+  display: inline-block;
+  padding: 10px 40px;  
   border-radius: 30px;
-  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 25px;
 }
-  @media (max-width: 952px){
+.indicators {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 20px;
+  color: white;
+  transform: translateX(-50%);
+}
+.indicators .active {
+  transition: border-radius 0.2s;
+  border: 1px solid white;
+  border-radius: 60px;
+  color: green !important;
+}
+#section_2{
+  position: relative;
+  background-color: #008000;
+  width: 100%;
+  margin-top: 90vh;
+  padding: 50px 0;
+}
+#party_agenda{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  text-decoration: underline;
+
+}
+#agenda_content{
+  text-align: center;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: white;
+  padding: 20px 20%;
+}
+#section_3{
+  position: relative;
+  background-color: #b7b7b8;
+  width: 100%;
+  height: 70px;
+}
+#yelowline{
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  color: yellow;
+  width: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 952px){
     #rjd_logo{
       height: 70px;
       float: left; 
@@ -231,6 +220,7 @@
       background: #056d05;
       top: 80px;
       left: -100%;
+      z-index: 5;
       text-align: center;
       transition: all .5s;
     }
@@ -250,67 +240,43 @@
       left: 0;
     }
     #section-1 {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
-
-    .left, .right {
+    .right{
       width: 100%;
-    }    
-  }
-
-
-
-
-
-
-
-
-
-
-
-  .slider-container {
-    position: relative;
-    /* width: 500px;
-    height: 300px; */
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .slide {
-    flex: 0 0 100%;
-    max-width: 100%;
-    position: relative;
-  }
-
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .slider-bubbles {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-  }
-
-  .slider-bubble {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-
-  .slider-bubble.active {
-    background-color: #333;
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      object-fit: cover;
+    }
+    .left{
+      margin-top: 700px;
+      width: 100%;
+      height: 400px; !important
+      top: 100%;
+      transform: translateY(-100%);      
+    }
+    #card_div_1{
+      padding: 80px 20px;  
+      font-size: 20px;
+      line-height: 25px;
+    }
+    #card_div_2{
+      padding: 20px 20px;  
+      font-size: 15px;
+      line-height: 20px;
+    }
+    #card_read_more{
+      margin-top: 300px;
+      padding: 5px 20px;  
+      font-size: 15px;
+      line-height: 20px;
+    }
+    #section_2{
+      margin-top: 700px;
+    }
+    #agenda_content{
+      padding: 20px 10%;
+      font-size: 12px;
+    }
   }
