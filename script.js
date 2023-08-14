@@ -59,3 +59,10 @@ function callFunctions() {
 
 // Start the infinite loop
 callFunctions();
+
+const videoIframe = document.getElementById('video-iframe');
+
+// Add event listener to reset video when it ends
+videoIframe.addEventListener('ended', function() {
+    videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+});
