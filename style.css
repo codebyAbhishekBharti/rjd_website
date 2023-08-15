@@ -211,6 +211,7 @@
 #section_5{
   position: relative;
   background-color: #008000;
+  overflow-x: hidden;
 }
 .dashed-line{
   position: absolute;
@@ -403,7 +404,7 @@
 .grid2{
   display: grid;
   margin: auto;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 25% 25% 25% 25%;
   gap: 20px;
   padding-bottom: 50px;
 }
@@ -421,7 +422,7 @@
   text-align: center;
   display: inline-flex;
   line-height: 55px;
-  /* border-bottom: white 4px solid; */
+  margin-bottom: 20px;
 }
 .Usefull_links_bottom{
   display: block;
@@ -441,13 +442,11 @@
   background-color: rgba(228, 199, 10,0.8);
   font-weight: bold;
 }
-.bottom_s_media_icon{
-  padding-left: 27px;
+.social_media_grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   font-size: 50px;
   color: white;
-}
-.contact_us_section{
-  display: block;
 }
 .contact_us_icon{
   display: inline-flex;
@@ -458,7 +457,6 @@
   display: inline-flex;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  margin-top: 20px;
 }
 #bottom_line{
  width: 100%;
@@ -473,11 +471,15 @@
 .bottom_split .right{
   right: 0;
 }
-.grid3{
+.contact_us_section{
   display: grid;
-  /* margin: auto; */
+  grid-template-columns: auto auto;
+  gap: 2px;
+}
+.grid3{
+  width: 100%;
+  display: grid;
   grid-template-columns: auto auto auto;
-  gap: 20px;
 }
 .last_line{
   text-align: center;
@@ -603,6 +605,10 @@
     width: 100%;
     height: 360px;
   }
+  #section_8{
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
   .carousel-container{
     width: 100%;
     height: 250px;
@@ -618,21 +624,47 @@
   #grid1{
     width: 90%;
     grid-template-columns: 100%;
-}
-#grid1cont4,#grid1cont5,#grid1cont6{
-  display: none;
-}
-.grid2{
-  width: 90%;
-  grid-template-columns: 100%;
-}
-.grid3{
-  width: 90%;
-  grid-template-columns: 100%;
-}
-.last_line{
-  margin: 0;
-  padding: 0;
-}
+  }
+  #grid1cont4,#grid1cont5,#grid1cont6{
+    display: none;
+  }
+  .grid2{
+    width: 100%;
+    grid-template-columns: 50% 50%;
+  }
+  .bottom_title{
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .Usefull_links_bottom,.contact_us_text{
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .bottom_button_click{
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  .contact_us_icon{
+    font-size: 20px;
+  }
+  .bottom_s_media_icon{
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+  }
+  .social_media_grid{
+    display: grid;
+    width: 90%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50px 50px;
+  }
+
+  .grid3{
+    width: 90%;
+    grid-template-columns: 100%;
+  }
+  .last_line{
+    gap: 10px;
+  }
 
 }

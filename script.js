@@ -4,7 +4,7 @@ var btn3 = document.getElementById('btn3');
 var btn4 = document.getElementById('btn4');
 
 function func1(){
-    document.getElementById("right_banner").style.backgroundImage="url('images/Tejashwi-Yadav-salil-bera11.jpg')";
+    document.getElementById("right_banner").style.backgroundImage="linear-gradient(to right, #ababac 5%, transparent 25%), url('images/Tejashwi-Yadav-salil-bera11.jpg')";
     document.getElementById("card_div_1").innerHTML = "his is How  a Young Vision can change the BIHAR's fate.";
     document.getElementById("card_div_2").innerHTML = "This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.";
     btn1.classList.add('active');
@@ -13,7 +13,7 @@ function func1(){
     btn4.classList.remove('active');
 }
 function func2(){
-    document.getElementById("right_banner").style.backgroundImage="url(images/Lalu-Prasad-Yadav-Biography.webp)";
+    document.getElementById("right_banner").style.backgroundImage="linear-gradient(to right, #ababac 5%, transparent 25%), url(images/Lalu-Prasad-Yadav-Biography.webp)";
     document.getElementById("card_div_1").innerHTML = "RJD President Lalu Prasad  yadav's Vision for Bihar in 2030.";
     document.getElementById("card_div_2").innerHTML = "Lalu Prasad Yadav's influence on Bihar politics is undeniable. He championed social justice, empowering marginalized communities. Despite legal hurdles, his legacy shapes the state's political landscape, leaving a lasting imprint on its socio-economic fabric.";
     btn1.classList.remove('active');
@@ -22,7 +22,7 @@ function func2(){
     btn4.classList.remove('active');
 }
 function func3(){
-    document.getElementById("right_banner").style.backgroundImage="url(images/lalu.jpg)";
+    document.getElementById("right_banner").style.backgroundImage="linear-gradient(to right, #ababac 5%, transparent 25%), url(images/lalu.jpg)";
     document.getElementById("card_div_1").innerHTML = "Lalu Prasad Yadav's Impact on Bihar Politics.";
     document.getElementById("card_div_2").innerHTML = "Lalu Prasad Yadav is an Indian politician known for his charismatic leadership and controversial career. He served as the Chief Minister of Bihar and played a prominent role in regional politics, despite facing legal and ethical challenges throughout his tenure.";
     btn1.classList.remove('active');
@@ -31,7 +31,7 @@ function func3(){
     btn4.classList.remove('active');
 }
 function func4(){
-    document.getElementById("right_banner").style.backgroundImage="url(images/tejashwi-yadav-1604849739.jpg)";
+    document.getElementById("right_banner").style.backgroundImage="linear-gradient(to right, #ababac 5%, transparent 25%), url(images/tejashwi-yadav-1604849739.jpg)";
     document.getElementById("card_div_1").innerHTML = "This is How  a Young Vision can change the BIHAR's fate.";
     document.getElementById("card_div_2").innerHTML = "This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.";
     btn1.classList.remove('active');
