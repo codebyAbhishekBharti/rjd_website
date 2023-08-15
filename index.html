@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rashtriya Janta Dal</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="images/rashtriya-janata-dal-logo-png-images-thumbnail-1646991486.png">
         <!-- include bootstrap for letter text -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <!-- include font awesome for icons -->
@@ -22,7 +23,6 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <!-- <label class="logo">DesignX</label> -->
       <img id="rjd_logo" src="images/rjd_complete_logo.png" alt="RJD Logo">
       <ul>
         <li><a href="#" id="contribute">Contribute</a></li>
@@ -35,7 +35,7 @@
     </nav>
     <section id="section_1">
       <div class="left">
-        <div class="card">
+        <div id="top_left_card" class="card">
           <div id="card_div_1">This is How  a Young Vision can change the BIHAR's fate.</div>
           <div id="card_div_2">This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.This is a demo text and is used for only demonstration purpose only.</div>
           <div id="card_read_more" style="opacity: 1;">Read More</div>
@@ -84,7 +84,7 @@
     <div id="section_5">
       <div id="social_media_heading">Connect us on Social Media</div>
       <div class="dashed-line"></div>
-      <div class="image-container">
+      <div id="sec5_image_container" class="image-container">
         <div class="image-item">
           <a href="https://www.facebook.com/rjdparty">
             <img src="images/facebook-3-2.svg" alt="Image 1">
@@ -107,7 +107,7 @@
     </div>
     <div id="section_6">
       <div class="galary_heading">RJD GALLERY</div>
-      <div class="carousel-container">
+      <div id="sec6_carousel" class="carousel-container">
         <div class="carousel">
           <div class="slide">
             <img src="images/lalu.jpg" alt="Image 1">
@@ -224,5 +224,46 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <!-- run animation on containt view -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"
+    integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      var waypoint = new Waypoint({
+        element: document.getElementById('party_agenda'),
+        handler: function(direction) {
+          document.getElementById("party_agenda").classList.add("animate__animated", "animate__bounceInUp");
+        },
+        offset: window.innerWidth < 768 ? '90%' : '75%'
+      })
+      var waypoint = new Waypoint({
+        element: document.getElementById('agenda_content'),
+        handler: function(direction) {
+          document.getElementById("agenda_content").classList.add("animate__animated", "animate__bounceInUp","animate__delay-0.3s");
+        },
+        offset: '75%'
+      })
+      var waypoint = new Waypoint({
+        element: document.getElementById('join_box'),
+        handler: function(direction) {
+          document.getElementById("join_box").classList.add("animate__animated", "animate__zoomInDown");
+        },
+        offset: '90%'
+      })
+      var waypoint = new Waypoint({
+        element: document.getElementById('sec6_carousel'),
+        handler: function(direction) {
+          document.getElementById("sec6_carousel").classList.add("animate__animated", "animate__bounceInUp");
+        },
+        offset: window.innerWidth < 768 ? '90%' : '75%'
+      })
+      var waypoint = new Waypoint({
+        element: document.getElementById('sec5_image_container'),
+        handler: function(direction) {
+          document.getElementById("sec5_image_container").classList.add("animate__animated", "animate__shakeX");
+        },
+        offset: '75%'
+      })
+    </script>
   </body>
 </html>

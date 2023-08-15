@@ -162,7 +162,12 @@
   font-weight: 900;
   color: white;
   text-decoration: underline;
-
+  /* animation: bounce;
+  animation-duration: 2s;  */
+  opacity: 0;
+}
+#party_agenda.animate__animated,#agenda_content.animate__animated,#join_box.animate__animated{
+  opacity: 1 ;
 }
 #agenda_content{
   text-align: center;
@@ -171,6 +176,7 @@
   font-size: 20px;
   color: white;
   padding: 20px 20%;
+  opacity: 0;
 }
 #section_3{
   position: relative;
@@ -201,7 +207,8 @@
   text-shadow: 2px 2px grey;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
+  opacity: 0;  
 }
 #section_4{
   position: relative;
@@ -233,13 +240,11 @@
   line-height: 40px;
 }
 .image-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  padding: 0% 20%;
+  display: grid;
+  width: 80%;
+  margin: auto auto;
+  grid-template-columns: 33% 33% 33%;
 }
-
 .image-item {
   text-align: center;
 }
@@ -257,6 +262,13 @@
   background-color: #b7b7b8;
   width: 100%;
   height: 110vh;
+}
+#sec6_carousel{
+  opacity: 0;
+}
+#sec6_carousel.animate__animated{
+  opacity: 1;
+  left: 10%;
 }
 .galary_heading{
   position: absolute;
@@ -583,12 +595,13 @@
   }
   #social_media_heading{
     font-size: 20px;
-    padding: 10% 20%;
+    padding: 25px 20%;
   }
   .image-container{
-    padding: 0px 0px;
-    margin: -20px;
-    padding-bottom: 30px;
+    width: 100%;
+  }
+  .image-container img{
+    margin: auto auto;
   }
   .dashed-line{
     display: none;
@@ -665,6 +678,9 @@
   }
   .last_line{
     gap: 10px;
+  }
+  #sec6_carousel.animate__animated{
+    left: 0%;
   }
 
 }
