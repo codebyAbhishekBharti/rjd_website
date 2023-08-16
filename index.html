@@ -237,35 +237,35 @@
       var waypoint = new Waypoint({
         element: document.getElementById('party_agenda'),
         handler: function(direction) {
-          document.getElementById("party_agenda").classList.add("animate__animated", "animate__bounceInUp");
+          document.getElementById("party_agenda").classList.add("animate__animated", "animate__fadeInUp");
         },
         offset: window.innerWidth < 768 ? '90%' : '75%'
       })
       var waypoint = new Waypoint({
         element: document.getElementById('agenda_content'),
         handler: function(direction) {
-          document.getElementById("agenda_content").classList.add("animate__animated", "animate__bounceInUp","animate__delay-0.3s");
+          document.getElementById("agenda_content").classList.add("animate__animated", "animate__fadeInUp","animate__delay-0.3s");
         },
         offset: '75%'
       })
       var waypoint = new Waypoint({
         element: document.getElementById('join_box'),
         handler: function(direction) {
-          document.getElementById("join_box").classList.add("animate__animated", "animate__zoomInDown");
+          document.getElementById("join_box").classList.add("animate__animated", "animate__zoomIn");
         },
         offset: '90%'
       })
       var waypoint = new Waypoint({
         element: document.getElementById('sec6_carousel'),
         handler: function(direction) {
-          document.getElementById("sec6_carousel").classList.add("animate__animated", "animate__bounceInUp");
+          document.getElementById("sec6_carousel").classList.add("animate__animated", "animate__zoomIn");
         },
         offset: window.innerWidth < 768 ? '90%' : '75%'
       })
       var waypoint = new Waypoint({
         element: document.getElementById('sec5_image_container'),
         handler: function(direction) {
-          document.getElementById("sec5_image_container").classList.add("animate__animated", "animate__shakeX");
+          document.getElementById("sec5_image_container").classList.add("animate__animated", "animate__zoomIn");
         },
         offset: '75%'
       })
