@@ -17,7 +17,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
     </head>
-  <body>
+  <body onload="preloader_fn()">
+    <div id="preloader">
+      <img class="preloader_image" src="images/rashtriya-janata-dal-logo-png-images-thumbnail-1646991486.png" alt="">
+  </div>
+  <div id="afterpreloader">
+  </div>    
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -265,5 +270,11 @@
         offset: '75%'
       })
     </script>
+    <script>
+      function preloader_fn() {
+          document.getElementById('preloader').style.display = 'none';
+          document.getElementById("afterpreloader").style.display='block';
+      }
+  </script>    
   </body>
 </html>
