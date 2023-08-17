@@ -403,9 +403,8 @@
 }
 
 #section_7{
-  position: relative;
   background-color: #b7b7b8;
-
+  padding: 20px 10%;
 }
 #new_media_heading{
   font-size: 30px;
@@ -418,30 +417,51 @@
 }
 #grid1{
   display: grid;
-  width: 90%;
+  grid-template-columns: 33% 33% 33%;
   margin: auto;
-  grid-template-columns: auto auto auto;
   gap: 70px;
-  padding-bottom: 50px;
-  
-}
-.grid_image{
-  width: 100%;
-  height: 100%;
+  justify-content: center;         /*Horizontal center */
 }
 .grid1cont{
-  display: relative;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: white;
-  border: 6px solid #008000;
-  border-radius: 3px;
-  background: linear-gradient(to top, #000000 5%, transparent 60%);
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-size: 100% 100%;
+}
+#grid1_cont1{
+  background-image: linear-gradient(to top, black 5%, transparent 40%),
+  url(images/grid_image/rashtriya_janata_dal_rjd_chief_lalu_prasad_yadav__1672924912.webp);
+}
+#grid1_cont2{
+  background-image: linear-gradient(to top, black 5%, transparent 40%),
+  url(images/grid_image/q19u8pqo_tejashwi-yadav-pti_625x300_23_October_20.webp);
+}
+
+#grid1_cont3{
+  background-image: linear-gradient(to top, black 5%, transparent 40%),
+  url(images/grid_image/mjohpuv8_lalu-yadav_625x300_11_October_22.webp);
+}
+#grid1_cont4{
+  background-image: linear-gradient(to top, black 5%, transparent 40%),
+  url(images/grid_image/rashtriya_janata_dal_rjd_chief_lalu_prasad_yadav__1672924912.webp);
+}
+#grid1_cont5{
+  background-image: linear-gradient(to top, black 5%, transparent 40%),
+  url(images/grid_image/q19u8pqo_tejashwi-yadav-pti_625x300_23_October_20.webp);
+}
+#grid1_cont6{
+  background-image: linear-gradient(to top, black 5%, transparent 40%),
+  url(images/grid_image/mjohpuv8_lalu-yadav_625x300_11_October_22.webp);
 }
 .grid_text{
   position: absolute;
-  width: 100%;
+  bottom: 0;
   text-align: center;
-  background: linear-gradient(to top, #000000 5%, transparent 60%);
+  font-size: 18px;
+  color: white;
+  line-height: 22px;
+  padding-bottom: 5px;
 }
 #section_8{
   margin-top: 10px;
@@ -682,11 +702,15 @@
   .carousel{
     height: 200px;
   }
-  #grid1{
-    width: 90%;
-    grid-template-columns: 100%;
+  #section_7{
+    padding: 25px 25px;
   }
-  #grid1cont4,#grid1cont5,#grid1cont6{
+  #grid1{
+    width: 100%;
+    grid-template-columns: 100%;
+    gap: 40px;
+  }
+  #grid1_cont4,#grid1_cont5,#grid1_cont6{
     display: none;
   }
   .grid2{
