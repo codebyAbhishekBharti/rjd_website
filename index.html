@@ -162,8 +162,8 @@
     </div>
     <div id="section_9">
       <div class="grid5">
-          <div class="grid4cont"><a class="twitter-timeline" data-width="439" data-height="600"  href="https://twitter.com/RJDforIndia?ref_src=twsrc%5Etfw">Tweets by RJDforIndia</a>  </div>
-          <div class="grid4cont"><a class="twitter-timeline" data-width="439" data-height="600" href="https://twitter.com/yadavtejashwi?ref_src=twsrc%5Etfw">Tweets by yadavtejashwi</a> </div>
+          <div class="grid4cont"><a class="twitter-timeline" data-height="600"  href="https://twitter.com/RJDforIndia?ref_src=twsrc%5Etfw">Tweets by RJDforIndia</a>  </div>
+          <div class="grid4cont"><a class="twitter-timeline" data-height="600" href="https://twitter.com/yadavtejashwi?ref_src=twsrc%5Etfw">Tweets by yadavtejashwi</a> </div>
           <div id="grid4cont3" class="grid4cont">
             <div class="notice_heading">NOTICE</div>
             <div class="notice_box">
@@ -296,15 +296,11 @@
         offset: '75%'
       })
     </script>
-    <script>
-      function preloader_fn() {
-          document.getElementById('preloader').style.display = 'none';
-          document.getElementById("afterpreloader").style.display='block';
-      }
-  </script>  
   
   <!-- embedding twitter -->
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+  <div id="twitter-widget-placeholder"></div>
+
   <script>
     function setTwitterEmbedHeight() {
       const embedElements = document.querySelectorAll(".twitter-timeline");
@@ -317,6 +313,17 @@
     setTwitterEmbedHeight();
     window.addEventListener("resize", setTwitterEmbedHeight);
   </script>
-
+    <script>
+      function preloader_fn() {
+          document.getElementById('preloader').style.display = 'none';
+          document.getElementById("afterpreloader").style.display='block';
+          // Load the Twitter widget script
+          const twitterWidgetScript = document.createElement("script");
+          twitterWidgetScript.async = true;
+          twitterWidgetScript.src = "https://platform.twitter.com/widgets.js";
+          twitterWidgetScript.charset = "utf-8";
+          document.getElementById("twitter-widget-placeholder").appendChild(twitterWidgetScript);          
+      }
+    </script>  
   </body>
 </html>
