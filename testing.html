@@ -3,67 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
-
-    .preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    .loader {
-      border: 8px solid #f3f3f3;
-      border-top: 8px solid #3498db;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .content {
-      display: none;
-    }
-
-    body.loaded .content {
-      display: block;
-    }
-
-    body.loaded .preloader {
-      display: none;
-    }
-  </style>
   <script>
-    // Simulate page loading completion
-    setTimeout(function() {
-      document.body.classList.add('loaded');
-    }, 3000); // Simulated 3-second loading time
+    function adjustTwitterEmbedHeight() {
+      var embedEl = document.querySelector(".twitter-timeline");
+      var newHeight = window.innerWidth <= 767 ? 300 : 600;
+      embedEl.setAttribute("data-height", newHeight);
+    }
+
+    // Call the function on page load and whenever the window is resized
+    window.addEventListener("load", function() {
+      adjustTwitterEmbedHeight();
+      twttr.ready(function () {
+        twttr.events.bind('rendered', adjustTwitterEmbedHeight);
+      });
+    });
+
+    window.addEventListener("resize", adjustTwitterEmbedHeight);
   </script>
-  <title>Preloader Example</title>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <title>Twitter Embed Example</title>
 </head>
 <body>
-  <div class="preloader">
-    <div class="loader"></div>
-  </div>
-  <div class="content">
-    <h1>Welcome to My Page</h1>
-    <p>This is the content of the page.</p>
-  </div>
+  <!-- Your Twitter embed code -->
+  <a class="twitter-timeline" data-width="439" data-height="600" href="https://twitter.com/RJDforIndia?ref_src=twsrc%5Etfw">Tweets by RJDforIndia</a>
 </body>
 </html>

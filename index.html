@@ -160,6 +160,38 @@
         </div>
       </div>
     </div>
+    <div id="section_9">
+      <div class="grid5">
+          <div class="grid4cont"><a class="twitter-timeline" data-width="439" data-height="600"  href="https://twitter.com/RJDforIndia?ref_src=twsrc%5Etfw">Tweets by RJDforIndia</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
+          <div class="grid4cont"><a class="twitter-timeline" data-width="439" data-height="600" href="https://twitter.com/yadavtejashwi?ref_src=twsrc%5Etfw">Tweets by yadavtejashwi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
+          <div id="grid4cont3" class="grid4cont">
+            <div class="notice_heading">NOTICE</div>
+            <div class="notice_box">
+              <div class="notice_text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, reprehenderit.
+              </div>
+              <div class="notice_text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, reprehenderit.
+              </div>
+              <div class="notice_text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, reprehenderit.
+              </div>
+              <div class="notice_text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, reprehenderit.
+              </div>
+              <div class="notice_text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, reprehenderit.
+              </div>
+              <div class="notice_text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, reprehenderit.
+              </div>
+              <div class="notice_text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, reprehenderit.
+              </div>                          
+            </div>
+          </div>
+      </div>
+    </div>
     <div id="section_8">
       <div class="green_screen">
         <div class="bottom_boxing">
@@ -270,5 +302,22 @@
           document.getElementById("afterpreloader").style.display='block';
       }
   </script>    
+<script>
+  function setTwitterEmbedHeight() {
+    const embedElements = document.querySelectorAll(".twitter-timeline");
+
+    embedElements.forEach(embedElement => {
+      const newHeight = window.innerWidth <= 767 ? 400 : 600;
+      embedElement.setAttribute("data-height", newHeight);
+    });
+  }
+
+  // Set the initial height
+  setTwitterEmbedHeight();
+
+  // Update the height when the window is resized
+  window.addEventListener("resize", setTwitterEmbedHeight);
+</script>
+
   </body>
 </html>
